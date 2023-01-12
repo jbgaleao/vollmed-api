@@ -24,7 +24,6 @@ public class Paciente {
     @Embedded
     private Endereco endereco;
 
-
     public Paciente(PacienteDTO pacienteDTO) {
         this.email = pacienteDTO.email();
         this.endereco = new Endereco(pacienteDTO.endereco());
