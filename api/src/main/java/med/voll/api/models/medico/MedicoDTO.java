@@ -1,6 +1,5 @@
 package med.voll.api.models.medico;
 
-import jakarta.persistence.Enumerated;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -23,6 +22,10 @@ public record MedicoDTO(
         @NotBlank
         @Pattern(regexp = "\\d{4,6}")
         String crm,
+
+        @NotNull
+        Boolean ativo,
+
         @NotNull
         Especialidade especialidade,
         @NotNull

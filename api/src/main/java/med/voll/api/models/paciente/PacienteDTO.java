@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import med.voll.api.models.endereco.EnderecoDTO;
+
 public record PacienteDTO(
 
         @NotBlank(message = "Campo obrigatório")
@@ -14,6 +15,9 @@ public record PacienteDTO(
         @NotBlank(message = "Campo obrigatório")
         @Email
         String email,
+
+        @NotNull
+        Boolean ativo,
 
         @NotBlank(message = "Campo obrigatório")
         @Pattern(regexp = "\\d{11}")
